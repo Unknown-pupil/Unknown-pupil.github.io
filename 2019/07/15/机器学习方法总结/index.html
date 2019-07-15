@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="机器学习方法总结, Unknown-pupil">
+    <meta name="keywords" content="机器学习方法总结, weak-fox">
     <meta name="description" content="机器学习的基本概念输入空间输入‘X’可能取值的集合就是输入空间（input space）。输入空间可以是有限集合空间，也可以是整个欧式空间。
 输出空间输出‘Y’可能取值的集合就是输出空间（output space）。输出空间可以是有限集合空">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>机器学习方法总结 | Unknown-pupil</title>
+    <title>机器学习方法总结 | weak-fox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -29,7 +29,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -42,7 +42,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Unknown-pupil</span>
+                    <span class="logo-span">weak-fox</span>
                 </a>
             </div>
             
@@ -117,7 +117,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Unknown-pupil</div>
+        <div class="logo-name">weak-fox</div>
         <div class="logo-desc">
             
             Used to record my learning process
@@ -186,7 +186,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/Unknown-pupil/Unknown-pupil.github.io" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/weak-fox/weak-fox.github.io" class="waves-effect waves-light" target="_blank">
                 <i class="fa fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -242,7 +242,7 @@
     }
 </style>
 
-<a href="https://github.com/Unknown-pupil/Unknown-pupil.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/weak-fox/weak-fox.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -433,22 +433,22 @@
 </ol>
 <hr>
 <h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>针对单个具体样本，表示模型预测值与真实样本值之间的差距。损失函数越小，说明模型对于该样本预测越准确。常见损失函数有0-1损失函数、平方损失函数、绝对损失函数、对数损失函数（对数似然损失函数）。</p>
-<h3 id="常见的损失函数"><a href="#常见的损失函数" class="headerlink" title="常见的损失函数"></a>常见的损失函数</h3><p><img src="../images/20150323191253382.jpg" alt="avatar"></p>
+<h3 id="常见的损失函数"><a href="#常见的损失函数" class="headerlink" title="常见的损失函数"></a>常见的损失函数</h3><p><img src="/images/20150323191253382.jpg" alt></p>
 <hr>
 <h2 id="经验风险和结构风险"><a href="#经验风险和结构风险" class="headerlink" title="经验风险和结构风险"></a>经验风险和结构风险</h2><p>确定了损失函数后，那么自然地损失函数越小越好，由于模型的输入X，输出Y 是随机变量，遵循联合分布P(X, Y)，所以损失函数的期望为：</p>
-<p><img src="../images/8166116-bd9e4acdf2460fa2.png" alt="avatar"></p>
+<p><img src="/images/8166116-bd9e4acdf2460fa2.png" alt></p>
 <p>我们将上面提到的训练集的总损失定义为经验风险，如下所示：</p>
-<p><img src="../images/8166116-207a3b5e00a4117b.png" alt="avatar"></p>
+<p><img src="/images/8166116-207a3b5e00a4117b.png" alt></p>
 <p>将损失的期望称为期望风险，如下所示：</p>
-<p><img src="../images/8166116-bd9e4acdf2460fa2.png" alt="avatar"></p>
+<p><img src="/images/8166116-bd9e4acdf2460fa2.png" alt></p>
 <h3 id="怎样求风险？"><a href="#怎样求风险？" class="headerlink" title="怎样求风险？"></a>怎样求风险？</h3><p>机器学习问题求的是条件概率，那么有人就说了，既然上面提到了两随机变量的联合分布，那么我们根据条件概率-联合概率-边缘概率的关系岂不是可以直接求解？</p>
 <p>其实，我们手头无法得到全体样本，因此，联合概率 P(X, Y) 是无法得到的，但是根据弱大数定律，当样本N无限大时，可用经验风险作为期望风险的估计，也就是局部估计整体。</p>
 <p>那么我们常说的风险最小化其实就指的是经验风险最小化！</p>
 <h3 id="为何引入结构化风险？"><a href="#为何引入结构化风险？" class="headerlink" title="为何引入结构化风险？"></a>为何引入结构化风险？</h3><p>虽然可以使用经验损失近似估计期望风险，但是大数定理的前提是N无穷大，实际上，我们的训练集一般不会特别大，此时就需要对经验风险做出适当调整才能近似估计。因此引入结构风险。</p>
 <p>结构化风险是为了缓解数据集过小而导致的过拟合现象，其等价于正则化，本质上反应的是模型的复杂度。认为经验风险越小，参数越多，模型越复杂，因此引入对模型复杂度的惩罚机制。定义如下：</p>
-<p><img src="../images/8166116-93d70fbaebad2b46.png" alt="avatar"></p>
+<p><img src="/images/8166116-93d70fbaebad2b46.png" alt></p>
 <p>正则化被定义为模型复杂度的单调函数，λ用于权衡经验风险与模型复杂度。<br>至此，我们认为结构风险最小化的模型是最优模型，因此，我们的优化问题变为：</p>
-<p><img src="../images/8166116-88d3f8435e4c434a.png" alt="avatar"></p>
+<p><img src="/images/8166116-88d3f8435e4c434a.png" alt></p>
 <h3 id="结构化风险本质"><a href="#结构化风险本质" class="headerlink" title="结构化风险本质"></a>结构化风险本质</h3><p>结构化风险（正则项）其实是加入了模型参数分布的先验知识，也就是贝叶斯学派为了将模型往人们期望的地方去发展，继而加入了先验分布，由于是人为的先验，因此也就是一个规则项（这也就是正则项名称的由来）。这样一来，风险函数将进一步考虑了被估计量的先验概率分布。</p>
 <hr>
 <h2 id="参考资料和相关网址"><a href="#参考资料和相关网址" class="headerlink" title="参考资料和相关网址"></a>参考资料和相关网址</h2><p>经验风险、期望风险、结构风险:<br><a href="https://www.jianshu.com/p/903e35e1c95a" target="_blank" rel="noopener">https://www.jianshu.com/p/903e35e1c95a</a></p>
@@ -517,7 +517,7 @@
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            Unknown-pupil
+                            weak-fox
                             
                         </span>
                     </div>
@@ -556,7 +556,7 @@
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
-                            Unknown-pupil
+                            weak-fox
                             
                         </span>
                     </div>
@@ -700,7 +700,7 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/Unknown-pupil/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/weak-fox/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fa fa-github"></i>
     </a>
 
