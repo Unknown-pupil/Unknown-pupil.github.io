@@ -4,11 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="模型评估与选择, weak-fox">
-    <meta name="description" content="模型选择误差误差误差（Error）：是模型的预测输出值与其真实值之间的差异。
-训练训练（Training）：通过已知的样本数据进行学习，从而得到模型的过程。
-训练误差训练误差（Training Error）：模型作用于训练集时的误差。
-泛化">
+    <meta name="keywords" content="模型的性能度量, weak-fox">
+    <meta name="description" content="模型的性能度量性能度量：评价模型泛化能力的标准。
+均方误差回归模型的性能度量通常选用均方误差（Mean Squared Error）。
+分类算法的性能度量
+错误率：分类错误的样本占总样本的比例。
+精度：分类正确的样本占总样本的比例。
+查准率">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>模型评估与选择 | weak-fox</title>
+    <title>模型的性能度量 | weak-fox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +265,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        模型评估与选择
+                        模型的性能度量
                     </div>
                 </div>
             </div>
@@ -408,21 +410,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-15
+                    2019-07-18
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        591
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        2 分
                     </div>
                     
                 
@@ -438,36 +440,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h1><h2 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h2><h3 id="误差-1"><a href="#误差-1" class="headerlink" title="误差"></a>误差</h3><p>误差（Error）：是模型的预测输出值与其真实值之间的差异。</p>
-<h3 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h3><p>训练（Training）：通过已知的样本数据进行学习，从而得到模型的过程。</p>
-<h3 id="训练误差"><a href="#训练误差" class="headerlink" title="训练误差"></a>训练误差</h3><p>训练误差（Training Error）：模型作用于训练集时的误差。</p>
-<h3 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h3><p>泛化（Generalize）：由具体的、个别的扩大为一般的，即从特殊到一般，称为泛化。对机器学习的模型来讲，泛化是指模型作用于新的样本数据（非训练集）。</p>
-<h3 id="泛化误差"><a href="#泛化误差" class="headerlink" title="泛化误差"></a>泛化误差</h3><p>泛化误差（Generalize Error）：模型作用于新的样本数据时的误差。</p>
-<p><img src="/images/8166116-bd9e4acdf2460fa3.png" alt></p>
-<hr>
-<h2 id="欠拟合和过拟合"><a href="#欠拟合和过拟合" class="headerlink" title="欠拟合和过拟合"></a>欠拟合和过拟合</h2><h3 id="模型容量"><a href="#模型容量" class="headerlink" title="模型容量"></a>模型容量</h3><p>模型容量（Model Capacity）：是指其你和各种模型的能力。</p>
-<h3 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h3><p>过拟合（Overfitting）：是某个模型在训练集上表现得很好，但是在新样本上表现差。模型将训练集的特征学习得太好，导致一些非普遍规律被模型接纳和体现，从而在训练集上表现好，但是对于新样本表现差，反之则称为欠拟合（Underfitting），即模型对训练集的一半性质学习较差，模型作用于训练集时表现不好。</p>
-<h2 id="模型选择-1"><a href="#模型选择-1" class="headerlink" title="模型选择"></a>模型选择</h2><p>模型选择（Model Selection）：针对某个具体的任务，通常会有多种模型可供选择，对同一个模型也会有多组参数，可以通过分析、评估模型的泛化误差，选择泛化误差最小的模型。</p>
-<p>选择图中红线位置的模型：</p>
-<p><img src="/images/8166116-bd9e4acdf2460f223.png" alt></p>
-<hr>
-<h1 id="模型评估"><a href="#模型评估" class="headerlink" title="模型评估"></a>模型评估</h1><h2 id="评估思路"><a href="#评估思路" class="headerlink" title="评估思路"></a>评估思路</h2><p>通过实验测试，对模型的泛化误差进行评估，选出泛化误差最小的耳模型。待测数据集全集未知，使用测试集进行泛化测试，测试误差（Testing Error）即为泛化误差近似。</p>
-<p><img src="/images/8166116-bd9e4acderdsa3.png" alt></p>
-<hr>
-<h2 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h2><h3 id="1-留出法"><a href="#1-留出法" class="headerlink" title="1. 留出法"></a>1. 留出法</h3><p>留出法（Hold-out）：将已知数据集分成两个互斥的部分，其中一部分用来训练模型，另一部分用来测试模型，评估其误差，作为泛化误差的估计。</p>
-<ul>
-<li><p><strong>两个数据集的划分要尽可能保持数据分布一致性，避免因数据划分过程引入为的偏差。</strong></p>
+                <h1 id="模型的性能度量"><a href="#模型的性能度量" class="headerlink" title="模型的性能度量"></a>模型的性能度量</h1><p>性能度量：评价模型泛化能力的标准。</p>
+<h2 id="均方误差"><a href="#均方误差" class="headerlink" title="均方误差"></a>均方误差</h2><p>回归模型的性能度量通常选用均方误差（Mean Squared Error）。<br><img src="/images/81w3416-bd9e4acderdsa3.png" alt></p>
+<h2 id="分类算法的性能度量"><a href="#分类算法的性能度量" class="headerlink" title="分类算法的性能度量"></a>分类算法的性能度量</h2><ul>
+<li>错误率：分类错误的样本占总样本的比例。</li>
+<li>精度：分类正确的样本占总样本的比例。</li>
+<li>查准率：预测结果为正的样本中实际值也为正的比例。（例如：一个50个的样本，10个是标记为正确的，模型找到19个是正确的，这19个中包含9个是标记为正确的，此时查准率为9/19）</li>
+<li>查全率：实际值为正的样本中被预测为正的样本比例（例如：一个50个的样本，10个是标记为正确的，模型找到19个是正确的，这19个中包含9个是标记为正确的，此时查准率为9/10）</li>
+<li>P-R曲线：查准率-查全率曲线.</li>
+<li>混淆矩阵：将预测分类结果和实际分类结果做成矩阵的形式显示。</li>
+<li>$F_\beta$-score:$\beta$值的不同体现了对查全率和查准率的不同倾向，其公式为<script type="math/tex">F_\beta=\frac{(1+\beta^2)*P*R}{\beta^2*P+R}</script></li>
+<li>受试者特征曲线（ROC）和曲线下面积（AUC）：TPR-FPR曲线（真正例率-假正例率曲线）<br>正确肯定（True Positive,TP）：预测为真，实际为真<br>正确否定（True Negative,TN）：预测为假，实际为假<br>错误肯定（False Positive,FP）：预测为真，实际为假<br>错误否定（False Negative,FN）：预测为假，实际为真</li>
+<li>代价曲线：不同类型的预测错误对结果影响不同而增加代价（cost），绘制$P(+)cost-{cost}_{norm}$曲线</li>
+</ul>
+<h2 id="聚类算法的性能量度"><a href="#聚类算法的性能量度" class="headerlink" title="聚类算法的性能量度"></a>聚类算法的性能量度</h2><ul>
+<li>外部指标（External Index）：将聚类结果同某个参考模型进行比较<br><ol>
+<li>Jaccrd系数（Jaccrd Coefficient,JC）：<script type="math/tex">JC=\frac{a}{a+b+c}</script></li>
+<li>FM指数（Fowlkes and Mallows Index,FMI）：<script type="math/tex">FMI=\sqrt {\frac{a}{a+b}*\frac{a}{a+c}}</script></li>
+<li>Rand指数（Rand Index,RI）：<script type="math/tex">RI=\frac{2(a+d)}{m(m-1)}</script></li>
+</ol>
 </li>
-<li><p><strong>数据分割存在多种形式会导致不同的训练集、测试集划分，单次留出法结果往往存在偶然性，其稳定性较差，通常会进行若干次随机划分、重复实验评估取平均值作为评估结果。</strong></p>
-</li>
-<li><p><strong>数据集拆分成两部分，每部分的规模设置回影响评估结果，测试、训练的比例通常为7:3、8:2等</strong></p>
+<li>内部指标（Internal Index）：不使用参考模型直接考察聚类结果<br><ol>
+<li>DB指数（Davise-Bouldin Index，DBI）：<script type="math/tex">DBI=\frac{1}{k} \sum_1^k \max_{j \ne i} \left(\frac{avg(C_i)+avg(C_j)}{d_{cen}(u_i,u_j)}\right)</script></li>
+<li>Dunn指数（Dunn Index，DI）：<script type="math/tex">DI=min_{i \le j \le k} \{ \min_{j\ne i}\left(\frac{d_{min}(c_i,c_j)}{\max_{1 \le l \le k}diam(c_l)} \right)\}</script></li>
+</ol>
 </li>
 </ul>
-<h3 id="2-交叉验证法"><a href="#2-交叉验证法" class="headerlink" title="2. 交叉验证法"></a>2. 交叉验证法</h3><p>交叉验证法（Cross Validation）：将数据集划分k个大小相似的互斥的数据子集，子集数据尽可能保证数据分布的一致性（分层采样），每次从中选取一个数据集作为测试集，其余用作训练集，可以进行k次训练和测试，得到评估均值。该验证方法也称作k折交叉验证（k-fold Cross Validation）。使用不同划分，重复p次，称为p次k折交叉验证。</p>
-<p><img src="/images/8166116-bd9e4acdf24634fa2.png" alt></p>
-<h3 id="3-留一法"><a href="#3-留一法" class="headerlink" title="3. 留一法"></a>3. 留一法</h3><p>留一法（Leave-One-Out，简称LOO）。是k折交叉验证的特殊形式，将数据集分为两个，其中一个数据集记录条数为一，作为测试集使用，其余记录作为训练集训练模型。因此，留一法的评估结果往往被认为比较准确。然而，在数据集比较大时，训练次数和计算规模较大。另外，留一法的估计结果也未必永远比其他评估方法准确。</p>
-<h3 id="4-自助法"><a href="#4-自助法" class="headerlink" title="4. 自助法"></a>4. 自助法</h3><p>自助法（Bootstrapping）：是一种产生样本的抽样方法，其实质是有放回的随机抽样。即从已知数据集中随机抽取一条记录，然后将该记录放入测试集同时放回原数据集，继续下一次抽样，直到测试集中的数据条数满足要求。</p>
-<p><img src="/images/816611349e4acdf24634fa2.png" alt></p>
 
             </div>
             <hr/>
@@ -630,7 +628,7 @@
         repo: 'weak-fox.github.io',
         owner: 'weak-fox',
         admin: "weak-fox",
-        id: '2019-07-15T14-09-01',
+        id: '2019-07-18T15-06-40',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -651,9 +649,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/07/18/模型的性能度量/">
                     <div class="card-image">
@@ -676,9 +675,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -691,6 +690,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -713,20 +713,22 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/15/机器学习方法总结/">
+                <a href="/2019/07/15/模型评估与选择/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="机器学习方法总结">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="模型评估与选择">
                         
-                        <span class="card-title">机器学习方法总结</span>
+                        <span class="card-title">模型评估与选择</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            机器学习的基本概念输入空间输入‘X’可能取值的集合就是输入空间（input space）。输入空间可以是有限集合空间，也可以是整个欧式空间。
-输出空间输出‘Y’可能取值的集合就是输出空间（output space）。输出空间可以是有限集合空
+                            模型选择误差误差误差（Error）：是模型的预测输出值与其真实值之间的差异。
+训练训练（Training）：通过已知的样本数据进行学习，从而得到模型的过程。
+训练误差训练误差（Training Error）：模型作用于训练集时的误差。
+泛化
                         
                     </div>
                     <div class="publish-info">

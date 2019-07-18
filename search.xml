@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>模型的性能度量</title>
+      <link href="/2019/07/18/%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/"/>
+      <url>/2019/07/18/%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="模型的性能度量"><a href="#模型的性能度量" class="headerlink" title="模型的性能度量"></a>模型的性能度量</h1><p>性能度量：评价模型泛化能力的标准。</p><h2 id="均方误差"><a href="#均方误差" class="headerlink" title="均方误差"></a>均方误差</h2><p>回归模型的性能度量通常选用均方误差（Mean Squared Error）。<br><img src="/images/81w3416-bd9e4acderdsa3.png" alt></p><h2 id="分类算法的性能度量"><a href="#分类算法的性能度量" class="headerlink" title="分类算法的性能度量"></a>分类算法的性能度量</h2><ul><li>错误率：分类错误的样本占总样本的比例。</li><li>精度：分类正确的样本占总样本的比例。</li><li>查准率：预测结果为正的样本中实际值也为正的比例。（例如：一个50个的样本，10个是标记为正确的，模型找到19个是正确的，这19个中包含9个是标记为正确的，此时查准率为9/19）</li><li>查全率：实际值为正的样本中被预测为正的样本比例（例如：一个50个的样本，10个是标记为正确的，模型找到19个是正确的，这19个中包含9个是标记为正确的，此时查准率为9/10）</li><li>P-R曲线：查准率-查全率曲线.</li><li>混淆矩阵：将预测分类结果和实际分类结果做成矩阵的形式显示。</li><li>$F_\beta$-score:$\beta$值的不同体现了对查全率和查准率的不同倾向，其公式为<script type="math/tex">F_\beta=\frac{(1+\beta^2)*P*R}{\beta^2*P+R}</script></li><li>受试者特征曲线（ROC）和曲线下面积（AUC）：TPR-FPR曲线（真正例率-假正例率曲线）<br>正确肯定（True Positive,TP）：预测为真，实际为真<br>正确否定（True Negative,TN）：预测为假，实际为假<br>错误肯定（False Positive,FP）：预测为真，实际为假<br>错误否定（False Negative,FN）：预测为假，实际为真</li><li>代价曲线：不同类型的预测错误对结果影响不同而增加代价（cost），绘制$P(+)cost-{cost}_{norm}$曲线</li></ul><h2 id="聚类算法的性能量度"><a href="#聚类算法的性能量度" class="headerlink" title="聚类算法的性能量度"></a>聚类算法的性能量度</h2><ul><li>外部指标（External Index）：将聚类结果同某个参考模型进行比较<br><ol><li>Jaccrd系数（Jaccrd Coefficient,JC）：<script type="math/tex">JC=\frac{a}{a+b+c}</script></li><li>FM指数（Fowlkes and Mallows Index,FMI）：<script type="math/tex">FMI=\sqrt {\frac{a}{a+b}*\frac{a}{a+c}}</script></li><li>Rand指数（Rand Index,RI）：<script type="math/tex">RI=\frac{2(a+d)}{m(m-1)}</script></li></ol></li><li>内部指标（Internal Index）：不使用参考模型直接考察聚类结果<br><ol><li>DB指数（Davise-Bouldin Index，DBI）：<script type="math/tex">DBI=\frac{1}{k} \sum_1^k \max_{j \ne i} \left(\frac{avg(C_i)+avg(C_j)}{d_{cen}(u_i,u_j)}\right)</script></li><li>Dunn指数（Dunn Index，DI）：<script type="math/tex">DI=min_{i \le j \le k} \{ \min_{j\ne i}\left(\frac{d_{min}(c_i,c_j)}{\max_{1 \le l \le k}diam(c_l)} \right)\}</script></li></ol></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> 机器学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模型评估与选择</title>
       <link href="/2019/07/15/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/"/>
       <url>/2019/07/15/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> 机器学习 </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> 机器学习 </tag>
             
         </tags>
       
@@ -47,9 +74,9 @@
       
         <tags>
             
-            <tag> 机器学习 </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> 机器学习 </tag>
             
         </tags>
       
