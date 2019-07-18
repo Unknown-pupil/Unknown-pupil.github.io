@@ -29,7 +29,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -378,12 +379,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/机器学习/" target="_blank">
-                                <span class="chip bg-color">机器学习</span>
-                            </a>
-                        
                             <a href="/tags/Markdown/" target="_blank">
                                 <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                            <a href="/tags/机器学习/" target="_blank">
+                                <span class="chip bg-color">机器学习</span>
                             </a>
                         
                     </div>
@@ -693,12 +694,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/机器学习/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
                     <a href="/tags/Markdown/" target="_blank">
                         <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
                 </div>
@@ -748,12 +749,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/机器学习/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
                     <a href="/tags/Markdown/" target="_blank">
                         <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/机器学习/" target="_blank">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
                 </div>
@@ -874,7 +875,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">2.7k</span>
+                <span class="white-color">3.1k</span>
             
 
             
@@ -962,5 +963,20 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
