@@ -438,9 +438,9 @@
             <div id="articleContent">
                 <h1 id="一元线性回归"><a href="#一元线性回归" class="headerlink" title="一元线性回归"></a>一元线性回归</h1><h2 id="回归模型参数估计"><a href="#回归模型参数估计" class="headerlink" title="回归模型参数估计"></a>回归模型参数估计</h2><h3 id="最小二乘估计"><a href="#最小二乘估计" class="headerlink" title="最小二乘估计"></a>最小二乘估计</h3><p>最小二乘估计（Least Square Estimation ,OLE）：根据观察数据，寻找参数$\beta_0$,$\beta_1$的估计值$\hat{\beta_0}$,$\hat{\beta_1}$，使观测值和回归预测值的离差（离开正确值的差）平方和达到极小。估计值$\hat{\beta_0}$,$\hat{\beta_1}$称作回归参数$\beta_0$,$\beta_1$的最小二乘估计。</p>
 <ol>
-<li><p>列出离差平方和：<script type="math/tex">Q(\beta_0,\beta_1)=\sum\limit_{i=1}^n ( y_i - \beta_0-\beta_1x_i)^2</script><br>估计值满足：<script type="math/tex">Q(\hat{\beta_0},\hat{\beta_1})=\min\limit_{\beta_0,\beta_1}\sum\limit_{i=1}^n ( y_i - \beta_0-\beta_1x_i)^2</script></p>
+<li><p>列出离差平方和：<script type="math/tex">Q(\beta_0,\beta_1)=\sum\limits_{i=1}^n ( y_i - \beta_0-\beta_1x_i)^2</script><br>估计值满足：<script type="math/tex">Q(\hat{\beta_0},\hat{\beta_1})=\min\limits_{\beta_0,\beta_1}\sum\limits_{i=1}^n ( y_i - \beta_0-\beta_1x_i)^2</script></p>
 </li>
-<li><p>对$Q(\beta_0,\beta_1)$分别求$\beta_0$,$\beta_1$的偏导，并令其等于0，即求Q(\beta_0,\beta_1)$取极小值时$\beta_0$,$\beta_1$的取值，这取值即为估计值\hat{\beta_0},\hat{\beta_1}的值。</p>
+<li><p>对$Q(\beta_0,\beta_1)$分别求$\beta_0$,$\beta_1$的偏导，并令其等于0，即求$Q(\beta_0,\beta_1)$取极小值时$\beta_0$,$\beta_1$的取值，这取值即为估计值$\hat{\beta_0},\hat{\beta_1}$的值。</p>
 </li>
 </ol>
 <p><img src="/images/81234116-bd9e4acdf24634fa2.png" alt><br><img src="/images/812334216-bd9e4acdf24634fa2.png" alt></p>
