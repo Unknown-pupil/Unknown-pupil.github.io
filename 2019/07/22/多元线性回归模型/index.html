@@ -4,10 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="模型评估与选择, weak-fox">
-    <meta name="description" content="模型评估与选择模型选择误差误差误差（Error）：是模型的预测输出值与其真实值之间的差异。
-训练训练（Training）：通过已知的样本数据进行学习，从而得到模型的过程。
-训练误差训练误差（Training Error）：模型作用于训练集时">
+    <meta name="keywords" content="多元线性回归模型, weak-fox">
+    <meta name="description" content="多元线性回归多元线性回归模型多元线性回归模型为：$y=\beta_0+\beta_1x_1+\beta_2x_2+…+\beta_px_p+\varepsilon$
+其中$\varepsilon$为随机误差,满足：
+
+$E(\varepsi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>模型评估与选择 | weak-fox</title>
+    <title>多元线性回归模型 | weak-fox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +264,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        模型评估与选择
+                        多元线性回归模型
                     </div>
                 </div>
             </div>
@@ -408,21 +409,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-15
+                    2019-07-22
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        4 分
                     </div>
                     
                 
@@ -438,36 +439,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="模型评估与选择"><a href="#模型评估与选择" class="headerlink" title="模型评估与选择"></a>模型评估与选择</h1><h2 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h2><h3 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h3><h4 id="误差-1"><a href="#误差-1" class="headerlink" title="误差"></a>误差</h4><p>误差（Error）：是模型的预测输出值与其真实值之间的差异。</p>
-<h4 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h4><p>训练（Training）：通过已知的样本数据进行学习，从而得到模型的过程。</p>
-<h4 id="训练误差"><a href="#训练误差" class="headerlink" title="训练误差"></a>训练误差</h4><p>训练误差（Training Error）：模型作用于训练集时的误差。</p>
-<h4 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h4><p>泛化（Generalize）：由具体的、个别的扩大为一般的，即从特殊到一般，称为泛化。对机器学习的模型来讲，泛化是指模型作用于新的样本数据（非训练集）。</p>
-<h4 id="泛化误差"><a href="#泛化误差" class="headerlink" title="泛化误差"></a>泛化误差</h4><p>泛化误差（Generalize Error）：模型作用于新的样本数据时的误差。</p>
-<p><img src="/images/8166116-bd9e4acdf2460fa3.png" alt></p>
-<hr>
-<h3 id="欠拟合和过拟合"><a href="#欠拟合和过拟合" class="headerlink" title="欠拟合和过拟合"></a>欠拟合和过拟合</h3><h4 id="模型容量"><a href="#模型容量" class="headerlink" title="模型容量"></a>模型容量</h4><p>模型容量（Model Capacity）：是指其你和各种模型的能力。</p>
-<h4 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h4><p>过拟合（Overfitting）：是某个模型在训练集上表现得很好，但是在新样本上表现差。模型将训练集的特征学习得太好，导致一些非普遍规律被模型接纳和体现，从而在训练集上表现好，但是对于新样本表现差，反之则称为欠拟合（Underfitting），即模型对训练集的一半性质学习较差，模型作用于训练集时表现不好。</p>
-<h3 id="模型选择-1"><a href="#模型选择-1" class="headerlink" title="模型选择"></a>模型选择</h3><p>模型选择（Model Selection）：针对某个具体的任务，通常会有多种模型可供选择，对同一个模型也会有多组参数，可以通过分析、评估模型的泛化误差，选择泛化误差最小的模型。</p>
-<p>选择图中红线位置的模型：</p>
-<p><img src="/images/8166116-bd9e4acdf2460f223.png" alt></p>
-<hr>
-<h2 id="模型评估"><a href="#模型评估" class="headerlink" title="模型评估"></a>模型评估</h2><h3 id="评估思路"><a href="#评估思路" class="headerlink" title="评估思路"></a>评估思路</h3><p>通过实验测试，对模型的泛化误差进行评估，选出泛化误差最小的耳模型。待测数据集全集未知，使用测试集进行泛化测试，测试误差（Testing Error）即为泛化误差近似。</p>
-<p><img src="/images/8166116-bd9e4acderdsa3.png" alt></p>
-<hr>
-<h3 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h3><h4 id="1-留出法"><a href="#1-留出法" class="headerlink" title="1. 留出法"></a>1. 留出法</h4><p>留出法（Hold-out）：将已知数据集分成两个互斥的部分，其中一部分用来训练模型，另一部分用来测试模型，评估其误差，作为泛化误差的估计。</p>
-<ul>
-<li><p><strong>两个数据集的划分要尽可能保持数据分布一致性，避免因数据划分过程引入为的偏差。</strong></p>
-</li>
-<li><p><strong>数据分割存在多种形式会导致不同的训练集、测试集划分，单次留出法结果往往存在偶然性，其稳定性较差，通常会进行若干次随机划分、重复实验评估取平均值作为评估结果。</strong></p>
-</li>
-<li><p><strong>数据集拆分成两部分，每部分的规模设置回影响评估结果，测试、训练的比例通常为7:3、8:2等</strong></p>
-</li>
-</ul>
-<h4 id="2-交叉验证法"><a href="#2-交叉验证法" class="headerlink" title="2. 交叉验证法"></a>2. 交叉验证法</h4><p>交叉验证法（Cross Validation）：将数据集划分k个大小相似的互斥的数据子集，子集数据尽可能保证数据分布的一致性（分层采样），每次从中选取一个数据集作为测试集，其余用作训练集，可以进行k次训练和测试，得到评估均值。该验证方法也称作k折交叉验证（k-fold Cross Validation）。使用不同划分，重复p次，称为p次k折交叉验证。</p>
-<p><img src="/images/8166116-bd9e4acdf24634fa2.png" alt></p>
-<h4 id="3-留一法"><a href="#3-留一法" class="headerlink" title="3. 留一法"></a>3. 留一法</h4><p>留一法（Leave-One-Out，简称LOO）。是k折交叉验证的特殊形式，将数据集分为两个，其中一个数据集记录条数为一，作为测试集使用，其余记录作为训练集训练模型。因此，留一法的评估结果往往被认为比较准确。然而，在数据集比较大时，训练次数和计算规模较大。另外，留一法的估计结果也未必永远比其他评估方法准确。</p>
-<h4 id="4-自助法"><a href="#4-自助法" class="headerlink" title="4. 自助法"></a>4. 自助法</h4><p>自助法（Bootstrapping）：是一种产生样本的抽样方法，其实质是有放回的随机抽样。即从已知数据集中随机抽取一条记录，然后将该记录放入测试集同时放回原数据集，继续下一次抽样，直到测试集中的数据条数满足要求。</p>
-<p><img src="/images/816611349e4acdf24634fa2.png" alt></p>
+                <h1 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h1><h2 id="多元线性回归模型"><a href="#多元线性回归模型" class="headerlink" title="多元线性回归模型"></a>多元线性回归模型</h2><p>多元线性回归模型为：$y=\beta_0+\beta_1x_1+\beta_2x_2+…+\beta_px_p+\varepsilon$</p>
+<p>其中$\varepsilon$为随机误差,满足：</p>
+<ol>
+<li>$E(\varepsilon)=0$ </li>
+<li>$var(\varepsilon)=\sigma^2$</li>
+</ol>
+<p>多元线性回归方程：$E(y)=E(\beta_0+\beta_1x_1+\beta_2x_2+…+\beta_px_p+\varepsilon)=&gt;y=\beta_0+\beta_1x_1+\beta_2x_2+…+\beta_px_p$</p>
+<p>多元线性回归方程的矩阵形式：</p>
+<p><img src="/images/8134416-bd9e4acd34f24634fa2.png" alt><br>$\hat{\beta}=(X^TX)^{-1}X^Ty$</p>
+<script type="math/tex; mode=display">y=X\beta+\varepsilon</script><h2 id="回归模型参数估计"><a href="#回归模型参数估计" class="headerlink" title="回归模型参数估计"></a>回归模型参数估计</h2><h3 id="最小二乘估计"><a href="#最小二乘估计" class="headerlink" title="最小二乘估计"></a>最小二乘估计</h3><p>最小二乘估计（Least Square Estimation ,OLE）：根据观察数据，寻找参数$\beta_0$,$\beta_1$的估计值$\hat{\beta_0}$,$\hat{\beta_1}$，使观测值和回归预测值的离差（离开正确值的差）平方和达到极小。估计值$\hat{\beta_0}$,$\hat{\beta_1}$称作回归参数$\beta_0$,$\beta_1$的最小二乘估计。</p>
+<p><img src="/images/8166116-bd9e23160fa3.png" alt></p>
+<h3 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h3><p><img src="/images/8166116-bd9e4ac3213fa3.png" alt></p>
+<h2 id="回归模型的显著性检验"><a href="#回归模型的显著性检验" class="headerlink" title="回归模型的显著性检验"></a>回归模型的显著性检验</h2><h3 id="回归方程是否显著：F检验"><a href="#回归方程是否显著：F检验" class="headerlink" title="回归方程是否显著：F检验"></a>回归方程是否显著：F检验</h3><p>F检验是根据平方和分解式，直接从回归效果检验回归方程的显著性。由平方和分解式可得到SSR越大，回归效果越好，据此构造F统计量。</p>
+<p><img src="/images/8166116-bd9432342460fa3.png" alt></p>
+<ol>
+<li>确定假设：想检验自变量X对因变量Y是否有明显影响，即原假设$H_0: \beta_1=\beta_2… = 0$,备择假设$H_1: \beta_1 \ne 0$</li>
+<li>确定检验水平：最常用的有$\alpha=0.05,\alpha=0.01,\alpha=0.005…$</li>
+<li>计算统计量：计算自由度为(p,n-p-1)的F统计量</li>
+<li>计算p值：根据F值计算p值（也可以直接去比较F值）<br><img src="/images/8166116-bd432423213fa3.png" alt></li>
+<li>得到结论：p&lt;$\alpha$或者$F&gt;F_\alpha(p,n-p-1)$，拒绝原假设$H_0$,接受备择假设$H_1：\beta_1 \ne 0,\beta_2 \ne 0…$</li>
+</ol>
+<h3 id="回归系数是否显著：t检验"><a href="#回归系数是否显著：t检验" class="headerlink" title="回归系数是否显著：t检验"></a>回归系数是否显著：t检验</h3><p>因变量y与自变量x之间是否存在线性关系，即$\beta_1$是否等于0，使用t检验进行判断。</p>
+<ol>
+<li>确定假设：检验$x_j$对y是否作用显著，即原假设$H_{0j}: \beta_j = 0$,备择假设$H_{1j}: \beta_j \ne 0$</li>
+<li>确定检验水平：最常用的有$\alpha=0.05,\alpha=0.01,\alpha=0.005…$</li>
+<li>构造统计量：$H_0$成立时：$\hat{\beta_1}\sim N(\beta,\sigma^2(X^TX)^{-1}$,记$C=(X^TX)^{-1}$,构造t统计量：<script type="math/tex">t = \frac{\hat{\beta_j}}{\sqrt{\hat{\sigma^2}c_{jj}}} = \frac{\hat{\beta_j}}{\sqrt{C_jj}}\sqrt{\frac{n-p-1}{\varepsilon^T\varepsilon}}</script></li>
+<li>根据t值计算p值（也可以直接去比较T值）：计算t统计量，符合自由度n-p-1的t分布，双尾检测，查临界值表，找到p值</li>
+<li>得到结论：p&lt;$\alpha$或者$t&gt;t_\alpha(n-p-1)$，拒绝原假设$H_{0j}$,接受备择假设$H_{1j}<br>t检验和F检验对多元线性回归来说不等价，F检验的目标时对所有自变量，t检验目标为单个自变量，即使F检验拒绝原假设，也不等于所有自变量都对因变量有影响，需要使用t检验去逐个验证。</li>
+</ol>
+<h2 id="自变量的标准化"><a href="#自变量的标准化" class="headerlink" title="自变量的标准化"></a>自变量的标准化</h2><p>多个自变量x的单位不同，其取值也不同，如果取值相差太大，会因计算误差问题导致回归方程结果不理想，需要对其进行标准化。<br><strong>中心化</strong>：找到样本数据的中心$(\bar{x_1},\bar{x_2},,…,\bar{x_p};\bar{y})$,回归方程回经过这点，通过坐标变化，将原点移到该中心：</p>
+<script type="math/tex; mode=display">x_{ij}^\prime=x_{ij}-\bar{x_j}\ \ \ \ \ \ \ i=1,2,...,n; j=1,2,...,p$$S
+$$y_i^\prime=y_i-\bar{y}\ \ \ \ \ \ \ i=1,2,...,n</script><p>中心化后方程：<script type="math/tex">\hat{y^\prime}=\hat{\beta_1}x_1^\prime+\hat{\beta_2}x_2^\prime+...+\hat{\beta_p}x_p^\prime</script></p>
+<p>中心化不会改变回归线的斜率，只改变了直线的截距，所以\hat{\beta_0}中心化后变成了0，而其他的回归系数\hat{\beta_1},\hat{\beta_2},…,\hat{\beta_p}没有变化。</p>
+<p><strong>标准化</strong>：自变量单位不同，数据大小差异大，不利于在同一个标准上进行比较，为了消除量纲不同和数量级的差异带来的影响，将样本数据标准化处理，然后使用最小二乘法，得到标准化后的回归系数。</p>
+<p>标准化公式为：$X_{ij}^\ast=\frac{x_{ij}-\bar{x_j}}{\sqrt{\frac{1}{n}\sum_{i=1}^n (x_{ij}-\bar{x_j})^2}}$<br>$y_{i}^\ast=\frac{y_{ij}-\bar{y}}{\sqrt{\frac{1}{n}\sum_{i=1}^n (y_{i}-\bar{y})^2}}$</p>
+<p>标准化后方程： <script type="math/tex">\hat{y^\ast }=\hat{\beta_1^\ast}x_1^\ast +\hat{\beta_2^\ast}x_2^\ast +...+ \hat{\beta_p^\ast} x_p ^\ast</script></p>
 
             </div>
             <hr/>
@@ -630,7 +637,7 @@
         repo: 'weak-fox.github.io',
         owner: 'weak-fox',
         admin: "weak-fox",
-        id: '2019-07-15T14-09-01',
+        id: '2019-07-22T10-27-58',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -651,34 +658,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/07/18/模型的性能度量/">
+                <a href="/2019/07/22/多元线性回归模型/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="模型的性能度量">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="多元线性回归模型">
                         
-                        <span class="card-title">模型的性能度量</span>
+                        <span class="card-title">多元线性回归模型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            模型的性能度量性能度量：评价模型泛化能力的标准。
-均方误差回归模型的性能度量通常选用均方误差（Mean Squared Error）。
-分类算法的性能度量
-错误率：分类错误的样本占总样本的比例。
-精度：分类正确的样本占总样本的比例。
-查准率
+                            多元线性回归多元线性回归模型多元线性回归模型为：$y=\beta_0+\beta_1x_1+\beta_2x_2+…+\beta_px_p+\varepsilon$
+其中$\varepsilon$为随机误差,满足：
+
+$E(\varepsi
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -691,6 +697,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -713,25 +720,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/15/机器学习方法总结/">
+                <a href="/2019/07/20/一元线性回归/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="机器学习方法总结">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="一元线性回归">
                         
-                        <span class="card-title">机器学习方法总结</span>
+                        <span class="card-title">一元线性回归</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            机器学习的基本概念输入空间输入‘X’可能取值的集合就是输入空间（input space）。输入空间可以是有限集合空间，也可以是整个欧式空间。
-输出空间输出‘Y’可能取值的集合就是输出空间（output space）。输出空间可以是有限集合空
+                            一元线性回归回归模型参数估计最小二乘估计最小二乘估计（Least Square Estimation ,OLE）：根据观察数据，寻找参数$\beta_0$,$\beta_1$的估计值$\hat{\beta_0}$,$\hat{\beta_1
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-20
                             </span>
                         <span class="publish-author">
                             

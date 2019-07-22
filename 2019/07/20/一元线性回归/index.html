@@ -460,8 +460,8 @@
 <ol>
 <li>确定假设：我们搜集数据是为了找到不达标的而证据，即原假设$H_0: \beta_1 = 0$,备择假设$H_1: \beta_1 \ne 0$</li>
 <li>确定检验水平：采取最常用的$\alpha=0.05$</li>
-<li>计算统计量：计算F统计量，原假设$H_0$其服从自由度为（k-1，T-k）</li>
-<li>计算p值：F=156.9，degree=(1,13)，$p=1.284*10^{-8}$</li>
+<li>计算统计量：计算F统计量，原假设$H_0$其服从自由度为(k-1,T-k)</li>
+<li>计算p值：F=156.9，degree=(1,13)，$p=1.284*10^{-8}$<br><img src="/images/8166116-bd9e4343fa3.png" alt></li>
 <li>得到结论：p&lt;$\alpha$，拒绝原假设$H_0$,接受备择假设$H_1：\beta_1 \ne 0$</li>
 </ol>
 <h3 id="相关系数显著性检验：t检验"><a href="#相关系数显著性检验：t检验" class="headerlink" title="相关系数显著性检验：t检验"></a>相关系数显著性检验：t检验</h3><p>相关系数（Correlation Coefficient）由卡尔·皮尔逊设计的统计指标，描述了变量之间线性相关程度的量，一般用字母r表示，由多种定义方式，一般是指皮尔逊相关系数。</p>
@@ -474,7 +474,7 @@
 <li>得到结论：p&lt;$\alpha$，拒绝原假设$H_0$,接受备择假设$H_1：\rho \ne 0$</li>
 </ol>
 <h3 id="决定系数"><a href="#决定系数" class="headerlink" title="决定系数"></a>决定系数</h3><p>通过平方和分解式SST=SSR+SSE,SSR占的比重越大，线性回归效果越好，即回归直线与样本观测值的拟合优度越好。定义回归平方和占总离差平方和的比例为<strong>决定系数(Coefficient of Determination)</strong>,也称确定系数，记作$r^2$：</p>
-<script type="math/tex; mode=display">r^2=\frac{SSR}{SST}=\frac{\sum_{i=1}^n (\hat{y_i}-\tilde{y})^2}{\sum_{i=1}^n (y_i-\tilde{y})^2}</script><p>决定系数是一个相对指标，取值在0~1之间，接近1表明回归方程拟合效果较好。但是需要注意几点：</p>
+<script type="math/tex; mode=display">r^2=\frac{SSR}{SST}=\frac{\sum_{i=1}^n (\hat{y_i}-\bar{y})^2}{\sum_{i=1}^n (y_i-\bar{y})^2}</script><p>决定系数是一个相对指标，取值在0~1之间，接近1表明回归方程拟合效果较好。但是需要注意几点：</p>
 <ul>
 <li>样本量较小时，决定系数并不能真正反应实际情况，需要调整决定系数</li>
 <li>决定系数较大，同样也不能肯定自变量与因变量之间关系就是线性的，可能曲线拟合更好，特别当自变量取值范围较小时，决定系数通常较大，可以做模型失拟检验（Lack of Fit Test）</li>
@@ -487,9 +487,9 @@
 <ul>
 <li>误差：真实值与模型输出值的差$\varepsilon_i=y_i-\beta_0-\beta_1x_i$</li>
 <li>残差：真实值与模型拟合值（估计值）的差，即为误差的估计值：$e_i=y_i-\hat{y_i}=y_i-\hat{\beta_0}-\hat{\beta_1}x_i$</li>
-<li>离差：真实值与模拟拟合值的期望（平均值）的差，离差平方和为：$SST=(y_i-\tilde{y})^2$</li>
+<li>离差：真实值与模拟拟合值的期望（平均值）的差，离差平方和为：$SST=(y_i-\bar{y})^2$</li>
 <li>偏差：事实上的真实值（不可知）与估计值的差：$bias=y_T-\hat{y_i}$</li>
-<li>方差：模型估计值与模型估计值的期望（平均值）的方差：$var=\sum_{i=1}^n(\hat{y_i}-\tilde{y})^2$</li>
+<li>方差：模型估计值与模型估计值的期望（平均值）的方差：$var=\sum_{i=1}^n(\hat{y_i}-\bar{y})^2$</li>
 </ul>
 <h3 id="残差的性质"><a href="#残差的性质" class="headerlink" title="残差的性质"></a>残差的性质</h3><ul>
 <li><p>残差的期望</p>
@@ -497,7 +497,7 @@
 <li><p>残差的约束条件</p>
 <script type="math/tex; mode=display">\sum_{i=1}^n e_i=0</script><script type="math/tex; mode=display">\sum_{i=1}^n x_ie_i=0</script></li>
 <li><p>残差的方差</p>
-<p>  <script type="math/tex">var(e_i)=[ 1-\frac{1}{n}-\frac{(x_i-\tilde{x})^2}{L_{xx}} ]\sigma^2=(1-h_ii)\sigma^2</script>其中$h_ii$称为杠杆值，取值为(0,1)</p>
+<p>  <script type="math/tex">var(e_i)=[ 1-\frac{1}{n}-\frac{(x_i-\bar{x})^2}{L_{xx}} ]\sigma^2=(1-h_ii)\sigma^2</script>其中$h_ii$称为杠杆值，取值为(0,1)</p>
 </li>
 </ul>
 <h3 id="残差改进方法"><a href="#残差改进方法" class="headerlink" title="残差改进方法"></a>残差改进方法</h3><ul>
@@ -714,30 +714,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/20/一元线性回归/">
+                <a href="/2019/07/22/多元线性回归模型/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="一元线性回归">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="多元线性回归模型">
                         
-                        <span class="card-title">一元线性回归</span>
+                        <span class="card-title">多元线性回归模型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一元线性回归回归模型参数估计最小二乘估计最小二乘估计（Least Square Estimation ,OLE）：根据观察数据，寻找参数$\beta_0$,$\beta_1$的估计值$\hat{\beta_0}$,$\hat{\beta_1
+                            多元线性回归多元线性回归模型多元线性回归模型为：$y=\beta_0+\beta_1x_1+\beta_2x_2+…+\beta_px_p+\varepsilon$
+其中$\varepsilon$为随机误差,满足：
+
+$E(\varepsi
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -750,7 +752,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -934,7 +935,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">6.6k</span>
+                <span class="white-color">7.7k</span>
             
 
             
