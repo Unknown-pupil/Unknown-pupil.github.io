@@ -451,7 +451,7 @@
 <ol>
 <li>确定假设：我们搜集数据是为了找到不达标的而证据，即原假设$H_0: \beta_1 = 0$,备择假设$H_1: \beta_1 \ne 0$</li>
 <li>确定检验水平：采取最常用的$\alpha=0.05$,或是更严格的$\alpha=0.01$</li>
-<li>构造统计量：$H_0$成立时：$\hat{\beta_1}\sim N(0,\frac{\sigma^2}{L_{xx}})$, 构造t统计量：<script type="math/tex">t = \frac{\hat{\beta_1}}{\sqrt{\hat{\sigma^2}/L_{xx}}} = \frac{\hat{\beta_1}}{\sqrt{\frac{1}{n-2}\ \sum_{i=1}^n(y_j-\hat{y_i})^2}}\ \sqrt{L_{xx}}</script></li>
+<li>构造统计量：$H_0$成立时：<script type="math/tex">\hat{\beta_1}\sim N(0,\frac{\sigma^2}{L_{xx}})</script>, 构造t统计量：<script type="math/tex">t = \frac{\hat{\beta_1}}{\sqrt{\hat{\sigma^2}/L_{xx}}} = \frac{\hat{\beta_1}}{\sqrt{\frac{1}{n-2}\ \sum_{i=1}^n(y_j-\hat{y_i})^2}}\ \sqrt{L_{xx}}</script></li>
 <li>比较p值和$\alpha$值：计算t统计量，符合自由度n-2的t分布，双尾检测，查临界值表，找到p值</li>
 <li>得到结论：p值若大于$\alpha$值，不能拒绝原假设。即通过本次采样得到的样本数据，并不能证明原假设$H_0$不成立，即本次得到的回归系数$\beta_1$无显著意义，需重新建模。</li>
 </ol>
@@ -935,7 +935,7 @@ $E(\varepsi
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">7.7k</span>
+                <span class="white-color">10.5k</span>
             
 
             
