@@ -420,14 +420,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        535
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        4 分
                     </div>
                     
                 
@@ -461,6 +461,30 @@
 <ul>
 <li>统计量$C_p$达到最小：<script type="math/tex; mode=display">C_p=\frac{SSE_p}{\hat{\sigma^2}}-n+2p=(n-m-1)\frac{SSE_p}{SSE_m}-n+2p</script></li>
 </ul>
+<h2 id="自变量选择的方法"><a href="#自变量选择的方法" class="headerlink" title="自变量选择的方法"></a>自变量选择的方法</h2><h3 id="前进法"><a href="#前进法" class="headerlink" title="前进法"></a>前进法</h3><ul>
+<li>思路：变量由少到多，每次增加一个，直至没有可引入的变量</li>
+<li>具体做法：<ul>
+<li>对所有m个自变量，分别对因变量y进行建模，建立m个一元线性回归方程</li>
+<li>对这m个一元线性回归方程的m个回归系数进行F检验，计算F统计量值，找到最大的一个$F_j^1$</li>
+<li>将$F_j^1$和预先设定的检验水平$\alpha$对应的F值比较，若$F_j^1 \geq F_\alpha(1,n-2)$，将自变量$x_j$引入回归方程</li>
+<li>对$x_j$与剩余的m-1个自变量进行组合${x_j,x_1},{x_j,x_2},…{x_j,x_m}$,分别对因变量y进行建模，建立m-1个二元线性回归方程，对这m-1个方程中非$x_j$的回归系数进行F检验，选出最大的F值$F_k^2$,和$\alpha$对应的临界值比较，若$F_k^2\geq F_\alpha(1,n-3)$，将$x_k$引入回归方程</li>
+<li>重复以上步骤，知道没有符合引入条件的变量为止，得到最终的回归方程<h3 id="后退法"><a href="#后退法" class="headerlink" title="后退法"></a>后退法</h3></li>
+</ul>
+</li>
+<li>思路：变量由多到少，每次减少一个，直至没有可减少的变量</li>
+<li>具体做法：<ul>
+<li>对所有m个自变量，对因变量y进行建模，建立一个m元线性回归方程</li>
+<li>对这个m元线性回归方程的m个回归系数进行F检验，计算F统计量，找到最小的一个$F_j^1$</li>
+<li>将$F_j^1$和预先设定的检验水平$\alpha$对应的F值比较，若$F_j^1 \leq F_\alpha(1,n-m-1)$，将自变量$x_j$剔除出回归方程</li>
+<li>对$x_j$与剩余的m-1个自变量进行组合${x_j,x_1},{x_j,x_2},…{x_j,x_m}$,分别对因变量y进行建模，建立m-1个二元线性回归方程，对这m-1个方程中非$x_j$的回归系数进行F检验，选出最大的F值$F_k^2$,和$\alpha$对应的临界值比较，若$F_k^2\leq F_\alpha(1,n-m)$，将$x_k$剔除出回归方程</li>
+<li>重复以上步骤，知道没有符合剔除条件的变量为止，得到最终的回归方程</li>
+</ul>
+</li>
+</ul>
+<h3 id="逐步回归法"><a href="#逐步回归法" class="headerlink" title="逐步回归法"></a>逐步回归法</h3><ul>
+<li>思路：有进有出。每当当前回归方程中的变量发生变化，都要对方称重的所有变量进行F检验</li>
+</ul>
+<p>!(/image/8166116-93d70fba321d2b46.png)</p>
 
             </div>
             <hr/>
@@ -873,7 +897,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">11.1k</span>
+                <span class="white-color">11.7k</span>
             
 
             
