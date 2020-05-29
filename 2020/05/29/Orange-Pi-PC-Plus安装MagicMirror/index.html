@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="一元线性回归, weak-fox">
-    <meta name="description" content="一元线性回归回归模型参数估计最小二乘估计最小二乘估计（Least Square Estimation ,OLE）：根据观察数据，寻找参数$\beta_0$,$\beta_1$的估计值$\hat{\beta_0}$,$\hat{\beta_1">
+    <meta name="keywords" content="Orange Pi PC Plus安装MagicMirror, weak-fox">
+    <meta name="description" content="烧入系统到SD卡本次选择的是Orange Pi官方提供的OrangePi_pc-plus_ubuntu_xenial_desktop_linux5.3.5_v1.0
+设置rootfs大小分配的rootfs太小，需进行修改
+
+使用root用户">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>一元线性回归 | weak-fox</title>
+    <title>Orange Pi PC Plus安装MagicMirror | weak-fox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +264,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        一元线性回归
+                        Orange Pi PC Plus安装MagicMirror
                     </div>
                 </div>
             </div>
@@ -376,29 +379,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Markdown/" target="_blank">
-                                <span class="chip bg-color">Markdown</span>
-                            </a>
-                        
-                            <a href="/tags/机器学习/" target="_blank">
-                                <span class="chip bg-color">机器学习</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                Markdown
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -406,21 +392,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-20
+                    2020-05-29
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.9k
+                        315
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        7 分
+                        1 分
                     </div>
                     
                 
@@ -436,102 +422,85 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一元线性回归"><a href="#一元线性回归" class="headerlink" title="一元线性回归"></a>一元线性回归</h1><h2 id="回归模型参数估计"><a href="#回归模型参数估计" class="headerlink" title="回归模型参数估计"></a>回归模型参数估计</h2><h3 id="最小二乘估计"><a href="#最小二乘估计" class="headerlink" title="最小二乘估计"></a>最小二乘估计</h3><p>最小二乘估计（Least Square Estimation ,OLE）：根据观察数据，寻找参数$\beta_0$,$\beta_1$的估计值$\hat{\beta_0}$,$\hat{\beta_1}$，使观测值和回归预测值的离差（离开正确值的差）平方和达到极小。估计值$\hat{\beta_0}$,$\hat{\beta_1}$称作回归参数$\beta_0$,$\beta_1$的最小二乘估计。</p>
-<ol>
-<li><p>列出离差平方和：<script type="math/tex">Q(\beta_0,\beta_1)=\sum\limits_{i=1}^n ( y_i - \beta_0-\beta_1x_i)^2</script><br>估计值满足：<script type="math/tex">Q(\hat{\beta_0},\hat{\beta_1})=\min\limits_{\beta_0,\beta_1}\sum\limits_{i=1}^n ( y_i - \beta_0-\beta_1x_i)^2</script></p>
+                <h1 id="烧入系统到SD卡"><a href="#烧入系统到SD卡" class="headerlink" title="烧入系统到SD卡"></a>烧入系统到SD卡</h1><pre><code>本次选择的是Orange Pi官方提供的OrangePi_pc-plus_ubuntu_xenial_desktop_linux5.3.5_v1.0
+</code></pre><h1 id="设置rootfs大小"><a href="#设置rootfs大小" class="headerlink" title="设置rootfs大小"></a>设置rootfs大小</h1><pre><code>分配的rootfs太小，需进行修改
+</code></pre><ul>
+<li>使用root用户<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  su root
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li><p>对$Q(\beta_0,\beta_1)$分别求$\beta_0$,$\beta_1$的偏导，并令其等于0，即求$Q(\beta_0,\beta_1)$取极小值时$\beta_0$,$\beta_1$的取值，这取值即为估计值$\hat{\beta_0},\hat{\beta_1}$的值。</p>
+<li>使用fdisk进行操作<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  sudo fdisk  /dev/mmcblk0
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-</ol>
-<p><img src="/images/81234116-bd9e4acdf24634fa2.png" alt><br><img src="/images/812334216-bd9e4acdf24634fa2.png" alt></p>
-<h3 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h3><p>最大似然估计（Maximum Likelihood Estimation,MLE）：利用总体的分布密度或概率分布的表达式及其样本所提供的信息求未知参数估计量的一种方法。</p>
-<p>最大似然估计的基本思路：已知样本符合某种分布，但分布的具体参数未知，通过实验，估算分布的参数。估算的思想为：已知某组参数能使当前样本出现的概率最大，就认为该参数为最终的估计值。</p>
-<p><img src="/images/8166116-bd9432acdf2460fa3.png" alt></p>
-<h2 id="回归模型的显著性检验"><a href="#回归模型的显著性检验" class="headerlink" title="回归模型的显著性检验"></a>回归模型的显著性检验</h2><h3 id="回归系数是否显著：t检验"><a href="#回归系数是否显著：t检验" class="headerlink" title="回归系数是否显著：t检验"></a>回归系数是否显著：t检验</h3><p>因变量y与自变量x之间是否存在线性关系，即$\beta_1$是否等于0，使用t检验进行判断。</p>
-<ol>
-<li>确定假设：我们搜集数据是为了找到不达标的而证据，即原假设$H_0: \beta_1 = 0$,备择假设$H_1: \beta_1 \ne 0$</li>
-<li>确定检验水平：采取最常用的$\alpha=0.05$,或是更严格的$\alpha=0.01$</li>
-<li>构造统计量：$H_0$成立时：<script type="math/tex">\hat{\beta_1}\sim N(0,\frac{\sigma^2}{L_{xx}})</script>, 构造t统计量：<script type="math/tex">t = \frac{\hat{\beta_1}}{\sqrt{\hat{\sigma^2}/L_{xx}}} = \frac{\hat{\beta_1}}{\sqrt{\frac{1}{n-2}\ \sum_{i=1}^n(y_j-\hat{y_i})^2}}\ \sqrt{L_{xx}}</script></li>
-<li>比较p值和$\alpha$值：计算t统计量，符合自由度n-2的t分布，双尾检测，查临界值表，找到p值</li>
-<li>得到结论：p值若大于$\alpha$值，不能拒绝原假设。即通过本次采样得到的样本数据，并不能证明原假设$H_0$不成立，即本次得到的回归系数$\beta_1$无显著意义，需重新建模。</li>
-</ol>
-<h3 id="回归方程是否显著：F检验"><a href="#回归方程是否显著：F检验" class="headerlink" title="回归方程是否显著：F检验"></a>回归方程是否显著：F检验</h3><p>F检验是根据平方和分解式，直接从回归效果检验回归方程的显著性。由平方和分解式可得到SSR越大，回归效果越好，据此构造F统计量。</p>
-<p><img src="/images/8166116-bd9432342460fa3.png" alt></p>
-<ol>
-<li>确定假设：我们搜集数据是为了找到不达标的而证据，即原假设$H_0: \beta_1 = 0$,备择假设$H_1: \beta_1 \ne 0$</li>
-<li>确定检验水平：采取最常用的$\alpha=0.05$</li>
-<li>计算统计量：计算F统计量，原假设$H_0$其服从自由度为(k-1,T-k)</li>
-<li>计算p值：F=156.9，degree=(1,13)，$p=1.284*10^{-8}$<br><img src="/images/8166116-bd9e4343fa3.png" alt></li>
-<li>得到结论：p&lt;$\alpha$，拒绝原假设$H_0$,接受备择假设$H_1：\beta_1 \ne 0$</li>
-</ol>
-<h3 id="相关系数显著性检验：t检验"><a href="#相关系数显著性检验：t检验" class="headerlink" title="相关系数显著性检验：t检验"></a>相关系数显著性检验：t检验</h3><p>相关系数（Correlation Coefficient）由卡尔·皮尔逊设计的统计指标，描述了变量之间线性相关程度的量，一般用字母r表示，由多种定义方式，一般是指皮尔逊相关系数。</p>
-<p><img src="/images/8134416-bd9e4acdf24634fa2.png" alt></p>
-<ol>
-<li>确定假设：我们搜集数据是为了找到不达标的而证据，即原假设$H_0: \rho = 0$,备择假设$H_1: \rho \ne 0$</li>
-<li>确定检验水平：采取最常用的$\alpha=0.01$</li>
-<li>计算统计量：计算t统计量，原假设$H_0$成立，$t=\frac{\sqrt{n-2r}}{1-r^2}$</li>
-<li>计算p值：n=15,r=0.9610,t=13.07,计算得到$p=7.432\times 10^{-9}$(也可以查相关临界值表，查到$\alpha=0.01$,degree=13对应的值为10.641，小于计算得到的t值)</li>
-<li>得到结论：p&lt;$\alpha$，拒绝原假设$H_0$,接受备择假设$H_1：\rho \ne 0$</li>
-</ol>
-<h3 id="决定系数"><a href="#决定系数" class="headerlink" title="决定系数"></a>决定系数</h3><p>通过平方和分解式SST=SSR+SSE,SSR占的比重越大，线性回归效果越好，即回归直线与样本观测值的拟合优度越好。定义回归平方和占总离差平方和的比例为<strong>决定系数(Coefficient of Determination)</strong>,也称确定系数，记作$r^2$：</p>
-<script type="math/tex; mode=display">r^2=\frac{SSR}{SST}=\frac{\sum_{i=1}^n (\hat{y_i}-\bar{y})^2}{\sum_{i=1}^n (y_i-\bar{y})^2}</script><p>决定系数是一个相对指标，取值在0~1之间，接近1表明回归方程拟合效果较好。但是需要注意几点：</p>
-<ul>
-<li>样本量较小时，决定系数并不能真正反应实际情况，需要调整决定系数</li>
-<li>决定系数较大，同样也不能肯定自变量与因变量之间关系就是线性的，可能曲线拟合更好，特别当自变量取值范围较小时，决定系数通常较大，可以做模型失拟检验（Lack of Fit Test）</li>
-<li>决定系数较小，如果样本量较小，则得到线性回归不显著的结果，如果样本量较大，则会得到线性回归显著；最后改进回归，如增加自变量、尝试曲线回归拟合等</li>
-</ul>
-<h2 id="残差"><a href="#残差" class="headerlink" title="残差"></a>残差</h2><h3 id="残差的基本概念"><a href="#残差的基本概念" class="headerlink" title="残差的基本概念"></a>残差的基本概念</h3><p>以一元回归为例，真实值与回归拟合值（模型输出）的差，称作残差（Residual）。</p>
-<p>残差：$e_i=y_i-\hat{y_i}$</p>
-<p>残差平方和：$\sum_{i=1}^n e_i^2 =\sum_{i=1}^n (y_i-\hat{\beta_0}-\hat{\beta_1}x_i)^2$</p>
-<p>几个常见“差”的概念：</p>
-<ul>
-<li>误差：真实值与模型输出值的差$\varepsilon_i=y_i-\beta_0-\beta_1x_i$</li>
-<li>残差：真实值与模型拟合值（估计值）的差，即为误差的估计值：$e_i=y_i-\hat{y_i}=y_i-\hat{\beta_0}-\hat{\beta_1}x_i$</li>
-<li>离差：真实值与模拟拟合值的期望（平均值）的差，离差平方和为：$SST=(y_i-\bar{y})^2$</li>
-<li>偏差：事实上的真实值（不可知）与估计值的差：$bias=y_T-\hat{y_i}$</li>
-<li>方差：模型估计值与模型估计值的期望（平均值）的方差：$var=\sum_{i=1}^n(\hat{y_i}-\bar{y})^2$</li>
-</ul>
-<h3 id="残差的性质"><a href="#残差的性质" class="headerlink" title="残差的性质"></a>残差的性质</h3><ul>
-<li><p>残差的期望</p>
-<script type="math/tex; mode=display">E(e_i)=E(y_i)-E(\hat{y_i})=(\beta_0+\beta_1x)=0</script></li>
-<li><p>残差的约束条件</p>
-<script type="math/tex; mode=display">\sum_{i=1}^n e_i=0</script><script type="math/tex; mode=display">\sum_{i=1}^n x_ie_i=0</script></li>
-<li><p>残差的方差</p>
-<p>  <script type="math/tex">var(e_i)=[ 1-\frac{1}{n}-\frac{(x_i-\bar{x})^2}{L_{xx}} ]\sigma^2=(1-h_ii)\sigma^2</script>其中$h_ii$称为杠杆值，取值为(0,1)</p>
+<li>输入p（查看信息）<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  p
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-</ul>
-<h3 id="残差改进方法"><a href="#残差改进方法" class="headerlink" title="残差改进方法"></a>残差改进方法</h3><ul>
-<li><p>标准化残差 $ZRE_i=\frac{e_i}{\hat{\sigma}}$</p>
-<ul>
-<li>标准化使残差可比</li>
-<li>可用其判断异常值，$|ZRE_i|&gt;3$</li>
-<li>无法处理方差不等的问题</li>
-</ul>
-</li>
-<li><p>学生化残差 $SRE_i=\frac{e_i}{\sigma \sqrt{1-h_{ii}}}$</p>
-<ul>
-<li>解决了方差不等的问题</li>
-<li>可根据$|SRE_i|&gt;3$判断异常值</li>
-</ul>
-</li>
-</ul>
-<h2 id="模型应用"><a href="#模型应用" class="headerlink" title="模型应用"></a>模型应用</h2><h3 id="预测"><a href="#预测" class="headerlink" title="预测"></a>预测</h3><ul>
-<li>单值预测：根据自变量和回归方程预测因变量的单个值：$\hat{y_0}=\hat{\beta_0}+\hat{\beta_1}x_0$</li>
-<li><p>区间预测：</p>
-<ul>
-<li>思路:显著水平$\alpha$，找到区间$(T_1,T_2)$，使得某特定$x_0$的实际值$y_0$以$1-\alpha$的概率在该区间内，即：$P(T_1 &lt; y_0 &lt; T_2)=1-\alpha$</li>
-<li><p>因变量新值的区间预测</p>
-<p>  预测因变量在某个置信度的取值区间</p>
-</li>
-<li><p>因变量新值的均值区间预测</p>
-<p>  预测因变量的均值在某个置信度的取值区间</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="控制"><a href="#控制" class="headerlink" title="控制"></a>控制</h3><p>控制时预测的反问题。<br>要把因变量y控制在一定范围内取值$T_1 &lt; y &lt; T_2$,需要控制x的值才能以$1-\alpha$的概率把目标值y控制在$(T_1,T_2)$中，即：$P(T_1 &lt; y_0 &lt; T_2)=1-\alpha$，其中$\alpha$时实现给定的(0,1)之间的小数，用来确定置信度。</p>
-<p><img src="/images/8166116-bd453acdf2460fa3.png" alt></p>
+<li>记住rootfs的起始位置和盘号</li>
+<li><p>输入d与盘号（删除分区）</p>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  d
 
+  盘号
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>输入n（添加分区）<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  n
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>输入p（主分区）<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  p
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>输入p（查看信息）<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  p
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>选择2，在开始位置输入start的值</li>
+<li>剩余直接回车</li>
+<li>输入w（保存）<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  w
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>重启<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  sudo reboot
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>重启之后修复分区</p>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  sudo resize2fs /dev/mmcblk0p2
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="下载并安装最新的Node-js版本"><a href="#下载并安装最新的Node-js版本" class="headerlink" title="下载并安装最新的Node.js版本"></a>下载并安装最新的Node.js版本</h1></li>
+<li><p>使用root用户 ！！！！之后都需要保持root用户状态 </p>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  su root
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>下载并安装最新的Node.js版本</p>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  sudo apt install -y nodejs
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h1 id="克隆存储库并检出master分支"><a href="#克隆存储库并检出master分支" class="headerlink" title="克隆存储库并检出master分支"></a>克隆存储库并检出master分支</h1><ul>
+<li><pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  git clone https://github.com/MichMich/MagicMirror
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  cd MagicMirror
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="npm换源"><a href="#npm换源" class="headerlink" title="npm换源"></a>npm换源</h1></li>
+<li><pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  npm config set registry https://registry.npm.taobao.org/
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>*</p>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  npm install
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><p>*</p>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  npm start
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="出现报错"><a href="#出现报错" class="headerlink" title="出现报错"></a>出现报错</h1><h2 id="报错一"><a href="#报错一" class="headerlink" title="报错一"></a>报错一</h2><p>  Error: Electron failed to install correctly, please delete node_modules/electron and try installing again<br>*</p>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-lang-bash"><code class="language-lang-bash">  sudo cnpm install -g electron
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="报错二"><a href="#报错二" class="headerlink" title="报错二"></a>报错二</h2><p>  grep: config/config.js: No such file or directory</p>
+</li>
+</ul>
+<p>*</p>
+<pre><code>```bash
+cp /home/orangepi/MagicMirror/config/config.js.sample /home/orangepi/MagicMirror/config/config.js
+```
+</code></pre>
             </div>
             <hr/>
 
@@ -693,7 +662,7 @@
         repo: 'weak-fox.github.io',
         owner: 'weak-fox',
         admin: "weak-fox",
-        id: '2019-07-20T14-29-53',
+        id: '2020-05-29T09-35-28',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -714,56 +683,42 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/07/22/多元线性回归模型/">
+                <a href="/2020/05/29/Orange-Pi-PC-Plus安装MagicMirror/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="多元线性回归模型">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Orange Pi PC Plus安装MagicMirror">
                         
-                        <span class="card-title">多元线性回归模型</span>
+                        <span class="card-title">Orange Pi PC Plus安装MagicMirror</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            多元线性回归多元线性回归模型多元线性回归模型为：$y=\beta_0+\beta_1x_1+\beta_2x_2+…+\beta_px_p+\varepsilon$
-其中$\varepsilon$为随机误差,满足：
+                            烧入系统到SD卡本次选择的是Orange Pi官方提供的OrangePi_pc-plus_ubuntu_xenial_desktop_linux5.3.5_v1.0
+设置rootfs大小分配的rootfs太小，需进行修改
 
-$E(\varepsi
+使用root用户
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-29
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            weak-fox
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/" target="_blank">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/机器学习/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -774,25 +729,27 @@ $E(\varepsi
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/20/回归分析/">
+                <a href="/2019/09/16/Android-Studio下进行apk签名发布/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="回归分析">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Android Studio下进行apk签名发布">
                         
-                        <span class="card-title">回归分析</span>
+                        <span class="card-title">Android Studio下进行apk签名发布</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            回归分析回归回归是处理两个或两个以上的变量之间相互依赖的定量关系的一种统计方法和技术，变量之间的关系并非确定的函数关系，通过一定的概率分布来描述。
-线性回归线性线性（Linear）的严格定义是一种映射关系，其映射关系满足可加性和其次性。通俗
+                            Android Studio下进行apk签名发布
+在Android Studio菜单栏中，Build —&gt; Generate Signed APK：
+如果已经有一个秘钥库，请转到步骤4，如果想创建一个新的秘钥库，单击新建：
+创建新的秘
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
                             </span>
                         <span class="publish-author">
                             
@@ -813,8 +770,8 @@ $E(\varepsi
                         <span class="chip bg-color">Markdown</span>
                     </a>
                     
-                    <a href="/tags/机器学习/" target="_blank">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/Android/" target="_blank">
+                        <span class="chip bg-color">Android</span>
                     </a>
                     
                 </div>
